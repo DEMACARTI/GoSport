@@ -1,0 +1,165 @@
+/* Startup Page Styles */
+
+/* Root styles */
+.root {
+    -fx-font-family: "SansSerif", "Roboto", "Arial", sans-serif;
+    -fx-background-color: radial-gradient(
+            focus-angle 360deg,
+            focus-distance 0%,
+            center 50% 100%,
+            radius 100%,
+            reflect,
+            #8f6cff 0%,      /* Bright purple center glow */
+            #3c1c57 40%,     /* Dark purple mid glow */
+            #1a1a2e 70%,     /* Deep navy */
+            #0a0a0a 100%     /* Black edges */
+    );
+
+}
+
+/* Panel styles */
+.left-panel{
+
+
+    /*-fx-background-color: radial-gradient(*/
+    /*        focus-angle 360deg,*/
+    /*        focus-distance 0%,*/
+    /*        center 50% 100%,*/
+    /*        radius 100%,*/
+    /*        reflect,*/
+    /*        #8f6cff 0%,      !* Bright purple center glow *!*/
+    /*        #3c1c57 40%,     !* Dark purple mid glow *!*/
+    /*        #1a1a2e 70%,     !* Deep navy *!*/
+    /*        #0a0a0a 100%     !* Black edges *!*/
+    /*        );*/
+        -fx-background-size: 100% 100%;
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+        -fx-padding: 20;
+        -fx-spacing: 20;
+        -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+
+
+}
+
+#bt_to_login {
+        -fx-border-color: lightgrey;
+        -fx-background-color: transparent;
+        -fx-border-width: 2;
+        -fx-border-radius: 8;
+        -fx-text-fill: #ccd0cf;
+        -fx-font-size: 17px;
+        -fx-border-style: solid;
+        -fx-display: block;
+
+}
+
+#logo {
+
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto", "Arial", sans-serif;
+    -fx-text-fill: #ccd0cf;
+
+}
+
+.right-panel {
+    -fx-background-image: url("/semup2.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+/* Label styles */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
+
+#titleLabel {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    /*-fx-text-fill: linear-gradient(to bottom right, black,  goldenrod, orange);*/
+    -fx-text-fill: white;
+    -fx-letter-spacing: 2px;
+}
+
+.subtitle {
+    -fx-font-size: 24px;
+    -fx-text-fill: #555555;
+    -fx-font-style: italic;
+}
+
+#textLabel {
+    -fx-font-style: italic;
+    -fx-font-weight: normal;
+    -fx-font-size: 12px;
+    -fx-text-fill: whitesmoke;
+}
+
+/* Button styles */
+.button {
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+#bt_login {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-background-color: #3366CC;
+    -fx-background-radius: 25;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+}
+
+#bt_login:hover {
+    -fx-background-color: #2855b0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+#bt_login:pressed {
+    -fx-background-color: #1f4799;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Features styles */
+.features-header {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.features-box {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.features-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.feature-item {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+}
+
+/* Animation for gradient background */
+@keyframes gradient {
+    0% {
+        -fx-background-position: 0% 50%;
+    }
+    50% {
+        -fx-background-position: 100% 50%;
+    }
+    100% {
+        -fx-background-position: 0% 50%;
+    }
+}

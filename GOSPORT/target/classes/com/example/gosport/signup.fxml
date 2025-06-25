@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@signup.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gosport.SignupController">
+   <children>
+      <AnchorPane fx:id="l_anchor" prefHeight="500.0" prefWidth="350.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="25.0" layoutY="20.0" prefHeight="460.0" prefWidth="300.0" spacing="15.0" stylesheets="@signup.css">
+               <children>
+                  <Label fx:id="label_signup" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="Create Account" textAlignment="CENTER" textFill="#3366cc">
+                     <font>
+                        <Font name="SansSerif Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000040" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </Label>
+                  <Separator prefWidth="200.0" />
+                  <TextField fx:id="tf_username" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-background-radius: 5; -fx-border-color: lightgrey; -fx-border-radius: 15; -fx-background-color: transparent;">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000026" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </TextField>
+                  <TextField fx:id="tf_email" prefHeight="40.0" prefWidth="250.0" promptText="Email" style="-fx-background-radius: 5; -fx-border-color: lightgrey; -fx-border-radius: 15; -fx-background-color: transparent;">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000026" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </TextField>
+                  <PasswordField fx:id="tf_pw" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-radius: 5; -fx-border-color: lightgrey; -fx-border-radius: 15; -fx-background-color: transparent;">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000026" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </PasswordField>
+                  <PasswordField fx:id="tf_cpw" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" style="-fx-background-radius: 5; -fx-border-color: lightgrey; -fx-border-radius: 15; -fx-background-color: transparent;">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000026" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                  </PasswordField>
+                  <Button fx:id="btn_signup" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #3366CC; -fx-background-radius: 15;" text="Sign Up" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#00000040" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="lbl_to_login" text="Already have an account?" textFill="#333333">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_login" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: transparent;" text="Login" textFill="#3366cc">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" styleClass="right-panel" />
+   </children>
+</HBox>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gosport.DashboardController">
+   <children>
+      <AnchorPane prefHeight="480.0" prefWidth="230.0" styleClass="sidebar">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="580.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="200.0" styleClass="app-name" text="GOSport" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="180.0" />
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" styleClass="profile-section">
+                     <children>
+                        <Circle fx:id="profilePicCircle" fill="DODGERBLUE" radius="40.0" stroke="WHITE" strokeType="INSIDE" />
+                        <Label fx:id="usernameLabel" styleClass="username-label" text="Username">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="userEmailLabel" styleClass="email-label" text="user@example.com">
+                           <font>
+                              <Font name="SansSerif Regular" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="180.0" />
+                  <Button fx:id="dashboardBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="nav-button" text="Dashboard">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="eventsBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="nav-button" text="Events">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="teamsBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="nav-button" text="Teams">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="messagesBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="nav-button" text="Messages">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="profileBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" styleClass="nav-button" text="Profile">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator prefWidth="180.0" />
+                  <Button fx:id="logoutBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#logout" prefHeight="0.0" prefWidth="180.0" styleClass="logout-button" text="Logout" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="426.0" prefWidth="526.0" styleClass="main-content">
+         <children>
+            <VBox layoutX="20.0" layoutY="20.0" prefHeight="560.0" prefWidth="640.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="640.0" spacing="20.0" styleClass="header-section">
+                     <children>
+                        <Label styleClass="page-title" text="Dashboard">
+                           <font>
+                              <Font name="SansSerif Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="480.0" prefWidth="679.0" styleClass="content-area" stylesheets="@dashboard.css" vbarPolicy="NEVER">
+                     <content>
+                        <VBox prefHeight="640.0" prefWidth="720.0" spacing="20.0" styleClass="dashboard-content">
+                           <children>
+                              <HBox prefWidth="620.0" spacing="20.0">
+                                 <children>
+                                    <AnchorPane prefHeight="150.0" prefWidth="300.0" styleClass="dashboard-card">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="110.0" prefWidth="260.0">
+                                             <children>
+                                                <Label styleClass="card-title" text="Upcoming Events">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="upcomingEventsCount" styleClass="card-value" text="5">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" styleClass="card-button" text="View All">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="150.0" prefWidth="300.0" styleClass="dashboard-card">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="110.0" prefWidth="260.0">
+                                             <children>
+                                                <Label styleClass="card-title" text="My Teams">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="teamsCount" styleClass="card-value" text="3">
+                                                   <font>
+                                                      <Font name="SansSerif Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" styleClass="card-button" text="View All">
+                                                   <font>
+                                                      <Font name="SansSerif Regular" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="620.0" styleClass="dashboard-card">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="20.0" prefHeight="160.0" prefWidth="580.0" spacing="10.0">
+                                       <children>
+                                          <Label styleClass="card-title" text="Recent Activities">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox fx:id="activitiesContainer" prefHeight="120.0" prefWidth="580.0" spacing="10.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="580.0" styleClass="activity-item">
+                                                   <children>
+                                                      <Label styleClass="activity-text" text="You joined Basketball Team" />
+                                                      <Label styleClass="activity-time" text="2 hours ago" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="580.0" styleClass="activity-item">
+                                                   <children>
+                                                      <Label styleClass="activity-text" text="You registered for Soccer Tournament" />
+                                                      <Label styleClass="activity-time" text="Yesterday" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="580.0" styleClass="activity-item">
+                                                   <children>
+                                                      <Label styleClass="activity-text" text="You updated your profile" />
+                                                      <Label styleClass="activity-time" text="3 days ago" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="620.0" styleClass="dashboard-card">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="20.0" layoutY="20.0" prefHeight="160.0" prefWidth="580.0" spacing="10.0">
+                                       <children>
+                                          <Label styleClass="card-title" text="Recommended Events">
+                                             <font>
+                                                <Font name="SansSerif Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox fx:id="recommendedEventsContainer" prefHeight="120.0" prefWidth="580.0" spacing="10.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0" spacing="10.0" styleClass="event-item">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="400.0">
+                                                         <children>
+                                                            <Label styleClass="event-title" text="Weekend Soccer Match">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label styleClass="event-details" text="Saturday, 10:00 AM - Central Park">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <Button mnemonicParsing="false" styleClass="join-button" text="Join">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="580.0" spacing="10.0" styleClass="event-item">
+                                                   <children>
+                                                      <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="400.0">
+                                                         <children>
+                                                            <Label styleClass="event-title" text="Basketball Tournament">
+                                                               <font>
+                                                                  <Font name="SansSerif Bold" size="14.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label styleClass="event-details" text="Sunday, 2:00 PM - City Sports Center">
+                                                               <font>
+                                                                  <Font name="SansSerif Regular" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                      <Button mnemonicParsing="false" styleClass="join-button" text="Join">
+                                                         <font>
+                                                            <Font name="SansSerif Bold" size="12.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

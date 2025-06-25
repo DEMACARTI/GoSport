@@ -1,0 +1,133 @@
+/* Login Page Styles */
+
+/* Root styles */
+.root {
+    -fx-font-family: "SansSerif", "Roboto", "Arial", sans-serif;
+}
+
+/* Text field styles */
+.text-field, .password-field {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+    -fx-transition: border-color 0.3s;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3366CC;
+    -fx-background-color: white;
+}
+
+/* Button styles */
+.button {
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+#tf_username ,#tf_password {
+
+    -fx-background-color: transparent;
+    -fx-text-fill: whitesmoke;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5;
+
+}
+
+#lbl_signup{
+    -fx-text-fill: black;
+    -fx-font-weight: italic;
+
+}
+
+#bt_login {
+    -fx-background-color: #3366CC;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+#bt_login:hover {
+    -fx-background-color: #2855b0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+#bt_login:pressed {
+    -fx-background-color: #1f4799;
+}
+
+#bt_to_signup {
+    -fx-background-color: transparent;
+    -fx-text-fill: #3366CC;
+    -fx-font-weight: bold;
+}
+
+#bt_to_signup:hover {
+    -fx-text-fill: #2855b0;
+    -fx-underline: true;
+}
+
+/* Label styles */
+#label_login {
+    -fx-text-fill: whitesmoke;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Right panel styles */
+.right-panel {
+    -fx-background-image: url("/semup.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+
+}
+#lftanc {
+
+-fx-background-color: linear-gradient(to bottom, #01020C 0%, #0C1E3D 25%, #174F92 50%, #67A7DB 75%, #D6E9F2 100%);
+
+}
+
+.lvbox{
+
+    -fx-effect: blur(10);
+
+}
+
+/* Features box */
+.features-box {
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.features-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.feature-item {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+/* Animation for gradient background */
+@keyframes gradient {
+    0% {
+        -fx-background-position: 0% 50%;
+    }
+    50% {
+        -fx-background-position: 100% 50%;
+    }
+    100% {
+        -fx-background-position: 0% 50%;
+    }
+}
